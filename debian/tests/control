@@ -1,0 +1,29 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test hex 0.4.3 --all-targets --all-features
+Features: test-name=rust-hex:@
+Depends: dh-cargo (>= 18), librust-criterion-0.3+default-dev, librust-faster-hex-0.5+default-dev, librust-pretty-assertions-0.6+default-dev, librust-rustc-hex-2+default-dev (>= 2.1-~~), librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-json-1+default-dev, librust-version-sync-0.9+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test hex 0.4.3 --all-targets --no-default-features --features alloc
+Features: test-name=librust-hex-dev:alloc
+Depends: dh-cargo (>= 18), librust-criterion-0.3+default-dev, librust-faster-hex-0.5+default-dev, librust-pretty-assertions-0.6+default-dev, librust-rustc-hex-2+default-dev (>= 2.1-~~), librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-json-1+default-dev, librust-version-sync-0.9+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test hex 0.4.3 --all-targets 
+Features: test-name=librust-hex-dev:default
+Depends: dh-cargo (>= 18), librust-criterion-0.3+default-dev, librust-faster-hex-0.5+default-dev, librust-pretty-assertions-0.6+default-dev, librust-rustc-hex-2+default-dev (>= 2.1-~~), librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-json-1+default-dev, librust-version-sync-0.9+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test hex 0.4.3 --all-targets --no-default-features --features std
+Features: test-name=librust-hex-dev:std
+Depends: dh-cargo (>= 18), librust-criterion-0.3+default-dev, librust-faster-hex-0.5+default-dev, librust-pretty-assertions-0.6+default-dev, librust-rustc-hex-2+default-dev (>= 2.1-~~), librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-json-1+default-dev, librust-version-sync-0.9+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test hex 0.4.3 --all-targets --no-default-features
+Features: test-name=librust-hex-dev:
+Depends: dh-cargo (>= 18), librust-criterion-0.3+default-dev, librust-faster-hex-0.5+default-dev, librust-pretty-assertions-0.6+default-dev, librust-rustc-hex-2+default-dev (>= 2.1-~~), librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-json-1+default-dev, librust-version-sync-0.9+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test hex 0.4.3 --all-targets --no-default-features --features serde
+Features: test-name=librust-hex+serde-dev:serde
+Depends: dh-cargo (>= 18), librust-criterion-0.3+default-dev, librust-faster-hex-0.5+default-dev, librust-pretty-assertions-0.6+default-dev, librust-rustc-hex-2+default-dev (>= 2.1-~~), librust-serde-1+default-dev, librust-serde-1+derive-dev, librust-serde-json-1+default-dev, librust-version-sync-0.9+default-dev, @
+Restrictions: allow-stderr, skip-not-installable

@@ -1,0 +1,57 @@
+Source: rust-hex
+Section: rust
+Priority: optional
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 24),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Ximin Luo <infinity0@debian.org>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/hex]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/hex
+Rules-Requires-Root: no
+
+Package: librust-hex-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends}
+Suggests:
+ librust-hex+serde-dev (= ${binary:Version})
+Provides:
+ librust-hex+alloc-dev (= ${binary:Version}),
+ librust-hex+default-dev (= ${binary:Version}),
+ librust-hex+std-dev (= ${binary:Version}),
+ librust-hex-0-dev (= ${binary:Version}),
+ librust-hex-0+alloc-dev (= ${binary:Version}),
+ librust-hex-0+default-dev (= ${binary:Version}),
+ librust-hex-0+std-dev (= ${binary:Version}),
+ librust-hex-0.4-dev (= ${binary:Version}),
+ librust-hex-0.4+alloc-dev (= ${binary:Version}),
+ librust-hex-0.4+default-dev (= ${binary:Version}),
+ librust-hex-0.4+std-dev (= ${binary:Version}),
+ librust-hex-0.4.3-dev (= ${binary:Version}),
+ librust-hex-0.4.3+alloc-dev (= ${binary:Version}),
+ librust-hex-0.4.3+default-dev (= ${binary:Version}),
+ librust-hex-0.4.3+std-dev (= ${binary:Version})
+Description: Encoding and decoding data into/from hexadecimal representation - Rust source code
+ This package contains the source for the Rust hex crate, packaged by debcargo
+ for use with cargo and dh-cargo.
+
+Package: librust-hex+serde-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ librust-hex-dev (= ${binary:Version}),
+ librust-serde-1-dev
+Provides:
+ librust-hex-0+serde-dev (= ${binary:Version}),
+ librust-hex-0.4+serde-dev (= ${binary:Version}),
+ librust-hex-0.4.3+serde-dev (= ${binary:Version})
+Description: Encoding and decoding data into/from hexadecimal representation - feature "serde"
+ This metapackage enables feature "serde" for the Rust hex crate, by pulling in
+ any additional dependencies needed by that feature.
