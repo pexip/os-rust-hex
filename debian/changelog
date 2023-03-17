@@ -1,3 +1,9 @@
+rust-hex (0.4.3-1pexip1) pexip; urgency=medium
+
+  * Prepare Pexip packaging
+
+ -- Huw Jones <huw@pexip.com>  Fri, 17 Mar 2023 12:23:43 +0000
+
 rust-hex (0.4.3-1) unstable; urgency=medium
 
   * Package hex 0.4.3 from crates.io using debcargo 2.4.4
